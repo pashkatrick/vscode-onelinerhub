@@ -6,7 +6,7 @@ const request = require("request-promise");
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
-	let disposable = vscode.commands.registerCommand('oneliner.helloWorld', function () {
+	let disposable = vscode.commands.registerCommand('oneliner.search', function () {
 		Search();
 	});
 

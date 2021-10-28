@@ -1,23 +1,44 @@
 {
 	"name": "oneliner",
-	"displayName": "oneliner",
-	"description": "",
+	"displayName": "Oneliner Hub",
+	"description": "Tool for search micro code pieces",
 	"version": "0.0.1",
+	"publisher": "pashkatrick",
+    "author": {
+        "name": "pashkatrick",
+        "email": "me@pshktrck.ru"
+    },	
 	"engines": {
 		"vscode": "^1.46.0"
 	},
+    "license": "MIT",
+    "icon": "assets/logo.png",	
+    "bugs": {
+        "url": "https://github.com/pashkatrick/vscode-onelinerhub/issues",
+        "email": "me@pshktrck.ru"
+    },	
+    "homepage": "https://github.com/pashkatrick/vscode-onelinerhub/blob/master/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pashkatrick/vscode-onelinerhub.git"
+    },	
 	"categories": [
-		"Other"
+		"Other",
+		"Snippets",
+        "Programming Languages"
 	],
+    "keywords": [
+        "keybindings"
+    ],	
 	"activationEvents": [
-		"onCommand:oneliner.helloWorld"
+		"onCommand:oneliner.search"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "oneliner.helloWorld",
-				"title": "Hello World"
+				"command": "oneliner.search",
+				"title": "Search for micro code pieces"
 			}
 		]
 	},
