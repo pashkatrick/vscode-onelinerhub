@@ -14,7 +14,6 @@ function activate(context) {
 		vscode.window.showInputBox({ placeHolder: 'Let\'s find what you 🔍 for' }).then(value => {
 			if (!value) return;
 			OneLiner(value);
-			return
 		})
 	}
 
@@ -30,21 +29,25 @@ function activate(context) {
 		}
 		vscode.window.showQuickPick(results, { placeHolder: 'Choose your best' }).then(value => {
 			if (!value) return;
-			matching.map(key => {
-				if (key.title == value) {
-					OpenWebResult(key)
-				} else if (key.title == '⬅️ back') {
-					Search()
-				} else {
-					vscode.window.showInformationMessage('Something went wrong...')
-				}
-			});
+			if (value == '⬅️ back') {
+				Search()
+			} else {
+				matching.map(key => {
+					if (key.title == value) {
+						OpenResult(key)
+					} else {
+						vscode.window.showInformationMessage('Something went wrong...')
+					}
+				});
+			}
 		})
 	}
 
-	function OpenWebResult(item) {
-		vscode.window.showInformationMessage(item.code, 'Explore').then(() => {
-			vscode.env.openExternal(vscode.Uri.parse(item.url));
+	function OpenResult(item) {
+		vscode.window.showInformationMessage(item.code, 'Explore').then(section => {
+			if (section == 'Explore') {
+				vscode.env.openExternal(vscode.Uri.parse(item.url));
+			}
 		});
 	}
 

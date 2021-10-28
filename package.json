@@ -2,34 +2,34 @@
 	"name": "oneliner",
 	"displayName": "Oneliner Hub",
 	"description": "Tool for search micro code pieces",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"publisher": "pashkatrick",
-    "author": {
-        "name": "pashkatrick",
-        "email": "me@pshktrck.ru"
-    },	
+	"author": {
+		"name": "pashkatrick",
+		"email": "me@pshktrck.ru"
+	},
 	"engines": {
 		"vscode": "^1.46.0"
 	},
-    "license": "MIT",
-    "icon": "assets/logo.png",	
-    "bugs": {
-        "url": "https://github.com/pashkatrick/vscode-onelinerhub/issues",
-        "email": "me@pshktrck.ru"
-    },	
-    "homepage": "https://github.com/pashkatrick/vscode-onelinerhub/blob/master/README.md",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/pashkatrick/vscode-onelinerhub.git"
-    },	
+	"license": "MIT",
+	"icon": "assets/logo.png",
+	"bugs": {
+		"url": "https://github.com/pashkatrick/vscode-onelinerhub/issues",
+		"email": "me@pshktrck.ru"
+	},
+	"homepage": "https://github.com/pashkatrick/vscode-onelinerhub/blob/master/README.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/pashkatrick/vscode-onelinerhub.git"
+	},
 	"categories": [
 		"Other",
 		"Snippets",
-        "Programming Languages"
+		"Programming Languages"
 	],
-    "keywords": [
-        "keybindings"
-    ],	
+	"keywords": [
+		"keybindings"
+	],
 	"activationEvents": [
 		"onCommand:oneliner.search"
 	],
@@ -38,7 +38,7 @@
 		"commands": [
 			{
 				"command": "oneliner.search",
-				"title": "Search for micro code pieces"
+				"title": "OnelinerHub"
 			}
 		]
 	},
@@ -59,6 +59,7 @@
 		"vscode-test": "^1.4.0"
 	},
 	"dependencies": {
+		"request": "^2.88.2",
 		"request-promise": "^4.2.6"
 	}
 }
